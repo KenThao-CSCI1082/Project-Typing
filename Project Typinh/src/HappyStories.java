@@ -10,7 +10,7 @@ public class HappyStories extends Tales{
 	
 	private int SIZE = 12;
 	private String[] story;
-	
+	//this is a test. will you see this?
 	
 	public HappyStories() {
 		
@@ -39,6 +39,8 @@ public class HappyStories extends Tales{
 		 story[10] = "There once lived a mouse";
 		 
 		 story[11] = "The key was on Destiny Island";
+		 
+		 story[12] = "Yeobosayo"
 		 
 		 //maybe we can upload images according to the story
 		 //Star Wars can have a Jedi (example)
