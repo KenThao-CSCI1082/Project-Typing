@@ -1,7 +1,7 @@
 //Name: Ken Thao, Rocky Lee
 //Class: CSCI 1082
 //Professor: Zak Baani
-//Date Due:
+//Date Due: Dec 12th
 
 //y
 import java.util.Random;
@@ -52,10 +52,16 @@ public class ScaryStories extends Tales{
 		
 	}
 
-
 	public String[] getStory() {
 		
 		return story;
+	}
+	
+	public static void main(String[] args) {
+		
+		ScaryStories user = new ScaryStories();
+		
+		user.pickStory();
 	}
 
 }

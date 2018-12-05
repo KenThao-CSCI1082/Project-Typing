@@ -1,9 +1,11 @@
 //Name: Ken Thao, Rocky Lee
 //Class: CSCI 1082
 //Professor: Zak Baani
-//Date Due:
+//Date Due: Dec 12th
 
-//y
+
 public class StoryGUI {
-
+	
+	
+	 
 }

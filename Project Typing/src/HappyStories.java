@@ -1,9 +1,9 @@
 //Name: Ken Thao, Rocky Lee
 //Class: CSCI 1082
 //Professor: Zak Baani
-//Date Due:
+//Date Due: Dec 12th
 
-//y
+
 import java.util.Random;
 
 public class HappyStories extends Tales{
@@ -40,11 +40,11 @@ public class HappyStories extends Tales{
 		 
 		 story[11] = "The key was on Destiny Island";
 		 
-		 story[12] = "Yeobosayo"
+		 
 		 
 		 //maybe we can upload images according to the story
 		 //Star Wars can have a Jedi (example)
-		 //Atlantis can have Aquaman (exampl)
+		 //Atlantis can have Aquaman (exampel)
 	
 	}
 	
