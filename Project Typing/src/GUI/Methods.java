@@ -1,11 +1,14 @@
 package GUI;
 
 import java.util.Scanner;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class Methods {
 	Scanner kyb = new Scanner(System.in);
 	
 	String words = "A long time ago in a galaxy far far away....";
+	
 	
 	String story = kyb.nextLine();
 	
@@ -15,28 +18,43 @@ public class Methods {
 	
 	public static void main(String[] args) {
 		
+		System.out.println("Type!");
 		Methods test = new Methods();
 		
 		test.calculateWPM();
 		
 		
 	}
-	public void calculateWPM() {
-		
+	public int calculateWPM() {
 		int WPM = wordsPerMinute/5;
+		return WPM;
 		
-		if (wordsPerMinute == 0) {
+		}
+	
+	
+		int secondsPassed = 0;
+		
+		Timer timer = new Timer();
+		
+		TimerTask task = new TimerTask() {
 			
-			System.out.print("You didn't type anything, pathetic!" + "\n");
-		}
-		
-		System.out.println("Story: " + words);
-		System.out.println("What you typed: " + story);
-		System.out.println("Characters: " + length);
-		System.out.println("Words Per Minute: " + WPM);
-		}
+			public void run() {
+			secondsPassed++;
+			System.out.println("Seconds Passed: " + secondsPassed);
+				
+				
+			}
+			
+			public void start() {
+				
+				timer.scheduleAtFixedRate(task, 1000, 1000);
+			}
+			
+			
+		};
 	
 	
 
 
 }
+
