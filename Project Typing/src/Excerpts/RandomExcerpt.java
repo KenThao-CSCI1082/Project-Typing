@@ -6,19 +6,19 @@
 package Stories;
 import java.util.Random;
 
-public class HappyStories extends Tales{
+public class RandomExcerpts extends Tales{
 	
 	private int SIZE = 12;
 	private String[] story;
 	
 	
-	public HappyStories() {
+	public RandomExcerpts() {
 		
 		this.story = new String[SIZE];
 		
 		 story[0] = "“Took you long enough,” he says, smirking as he juggles his footing and skirts past her, "
 		 		+"\n" + "giving her a quick kiss on the cheek as he does. “Don’t you know,” she says, shooting T-2LC "
-		 		+ "\n" + "a dubious look, “I have a condition.”";
+		 		+ "\n" +"a dubious look, “I have a condition.”";
 		
 		 story[1] = "Spelda tousled her son’s thick black hair. He’s grown so fast, she thought, and wiped a "
 		 		+ "\n" + "tear from the end of her rubbery button-nose. ‘A tale can have many endings,’ she said "
@@ -27,7 +27,7 @@ public class HappyStories extends Tales{
 		 
 		 story[2] = "For the last three weeks the Spartans had gone through a daily routine of stretching, isometric exercises, "
 		 		+ "\n" + "light sparring drills, and lots of eating. They were under orders to consume five high-protein meals a day."
-		 		+ "\n" +  "After every meal they had to report to the ship’s medical bay for a series of mineral and vitamin injections. "
+		 		+ "\n" + "After every meal they had to report to the ship’s medical bay for a series of mineral and vitamin injections. "
 		 		+ "\n" + "John was looking forward to getting back to Reach and his normal routine.";
 		 
 		 story[3] = "October arrived, spreading a damp chill over the grounds and into the castle. Madam Pomfrey, the nurse, was kept "
@@ -43,7 +43,7 @@ public class HappyStories extends Tales{
 		 
 		 story[5] = "War is an ugly thing, but not the ugliest of things. The decayed and degraded state of moral and patriotic feeling which thinks that nothing"
 		 		+ "\n" +  "is worth war is much worse. The person who has nothing for which he is willing to fight, nothing which is more important than his own personal"
-		 		+ "\n" +  " safety, is a miserable creature, and has no chance of being free unless made or kept so by the exertions of better men than himself.";
+		 		+ "\n" +  "safety, is a miserable creature, and has no chance of being free unless made or kept so by the exertions of better men than himself.";
 		 
 		 story[6] = "We know through painful experience that freedom is never voluntarily given by the oppressor; it must be demanded by the oppressed. Frankly, "
 		 		+ "\n" +  "I have neveryet engaged in a direct action movement that was ‘well-timed,’ according to the timetable of those who have not suffered unduly from "
@@ -53,12 +53,12 @@ public class HappyStories extends Tales{
 		 story[7] = "Atticus said to Jem one day, “I’d rather you shot at tin cans in the backyard, but I know you’ll go after birds. Shoot all the blue jays you "
 		 		+ "\n" +  "want, if you can hit ‘em, but remember it’s a sin to kill a mockingbird.” That was the only time I ever heard Atticus say it was a sin to do "
 		 		+ "\n" +  "something, and I asked Miss Maudie about it. “Your father’s right,” she said. “Mockingbirds don’t do one thing except make music for us to enjoy."
-		 		+ "\n" +  " They don’t eat up people’s gardens, don’t nest in corn cribs, they don’t do one thing but sing their hearts out for us. That’s why it’s a sin "
+		 		+ "\n" +  "They don’t eat up people’s gardens, don’t nest in corn cribs, they don’t do one thing but sing their hearts out for us. That’s why it’s a sin "
 		 		+ "\n" +  "to kill a mockingbird.";
 		 
 		 story[8] = "Being a half-blood is dangerous. It’s scary. Most of the time, it gets you killed in painful, nasty ways. If you’re a normal kid, reading this "
 		 		+ "\n" +  "because you think it’s fiction, great. Read on. I envy you for being able to believe that none of this ever happened. But if you recognize yourself"
-		 		+ "\n" +  " in these pages – if you feel something stirring inside – stop reading immediately. You might be one of us. And once you know that, it’s only a "
+		 		+ "\n" +  "in these pages – if you feel something stirring inside – stop reading immediately. You might be one of us. And once you know that, it’s only a "
 		 		+ "\n" +  "matter of time before they sense it too, and they’ll come for you.";
 		 
 		 story[9] = "At age 11, he entered the Anbu.[17] Itachi's accomplishments were a source of great pride for his family, his father viewing him as proof of the "
@@ -92,20 +92,26 @@ public class HappyStories extends Tales{
 		
 		Random rand = new Random();
 		
-		int randomStory = rand.nextInt(10) + 0;
+		int randomStory = rand.nextInt(12) + 0;
 		
-		return "Hello: " + (story[randomStory]);
+		return (story[randomStory]);
 		
+	}
+	
+	public void display() {
+		
+
 	}
 	//getters and setters
 	public String[] getStory() {
 		
 		return story;
+		
 	}
 	
 	public static void main(String[] args) {
 		
-		HappyStories user = new HappyStories();
+		RandomExcerpts user = new RandomExcerpts();
 		
 		user.pickStory();
 	 
