@@ -22,12 +22,14 @@ import java.util.TimerTask;
 import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 import javax.swing.JButton;
+import javax.swing.ScrollPaneConstants;
 
 public class StoryGUI extends JFrame{
 	
 	
 	JTextArea userTypesTxtArea;
 	JScrollPane userTypesScrollPane;
+	JScrollPane displayExcerptPane;
 	JLabel displayTimerLbl;
 	JButton btnStart;
 	JButton btnSelectExcerpt;
@@ -42,7 +44,7 @@ public class StoryGUI extends JFrame{
 		
 		setTitle("Project Typing");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1272, 714);
+		setBounds(100, 100, 1920, 1080);
 		omniPane = new JPanel();
 		omniPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(omniPane);
@@ -50,7 +52,7 @@ public class StoryGUI extends JFrame{
 		
 		//Top Panel and it's contents------------------------------------------------------------------------------------------------------------------
 		JPanel topPanel = new JPanel();
-		topPanel.setBounds(0, 0, 1254, 319);
+		topPanel.setBounds(0, 0, 1890, 319);
 		omniPane.add(topPanel);
 		topPanel.setLayout(null);
 		
@@ -59,7 +61,7 @@ public class StoryGUI extends JFrame{
 		displayTimerLbl.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		displayTimerLbl.setBounds(12, 170, 108, 49);
 		topPanel.add(displayTimerLbl);
-		bottomPanel.setBounds(0, 320, 1254, 347);
+		bottomPanel.setBounds(0, 320, 1890, 347);
 		omniPane.add(bottomPanel);
 		bottomPanel.setLayout(null);
 		
@@ -95,9 +97,9 @@ public class StoryGUI extends JFrame{
 		
 		//Displays Random Story
 		displayStoryTxtArea = new JTextArea();
-		displayStoryTxtArea.setFont(new Font("Courier New", Font.PLAIN, 14));
+		displayStoryTxtArea.setFont(new Font("Courier New", Font.PLAIN, 17));
 		displayStoryTxtArea.setEditable(false);
-		displayStoryTxtArea.setBounds(316, 13, 926, 282);
+		displayStoryTxtArea.setBounds(316, 13, 1562, 282);
 		topPanel.add(displayStoryTxtArea);
 		
 		//randomly picks a story from RandomExcerpts Class
@@ -106,13 +108,15 @@ public class StoryGUI extends JFrame{
 		btnSelectExcerpt.setToolTipText("Select a random excerpt");
 		btnSelectExcerpt.setBounds(167, 105, 129, 60);
 		topPanel.add(btnSelectExcerpt);
+		
+		
 		RandomExcerpts randomExcerpt = new RandomExcerpts();
 		btnSelectExcerpt.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent a) {
 					String callingBtn = a.getActionCommand();
 					if (callingBtn == "Random Excerpt") {
 					
-						System.out.println("Hello, is this actually working?");
+						
 						String pickExcerpt = randomExcerpt.pickStory();
 						
 						displayStoryTxtArea.append(pickExcerpt + "\n");
@@ -164,8 +168,12 @@ public class StoryGUI extends JFrame{
 	bottomPanel.add(userTypesTxtArea);
 	
 	//scroll pane bar for user
-	userTypesScrollPane = new JScrollPane();
-	userTypesScrollPane.setBounds(1175, 13, 21, 321);
+	userTypesScrollPane = new JScrollPane(userTypesTxtArea);
+	userTypesScrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+	userTypesScrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+	userTypesScrollPane.setBounds(10, 13, 1868, 321);
+	
+	
 	bottomPanel.add(userTypesScrollPane);
 	}
 	
